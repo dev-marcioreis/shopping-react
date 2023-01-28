@@ -134,9 +134,13 @@
     font-weight: 500;
     color: var(--black-color);
     text-transform: capitalize;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: var(--transition);
 }
 .header ul li a:hover {
-    color: var(--primary-color);
+    color: var(--white-color);
+    background: var(--primary-color);
 }
 .open {
     display: none;
