@@ -1,4 +1,6 @@
 # Shopping (React)
+Iniciando novo projeto em React JS.<br>
+Link de acesso:
 
 Getting Started with Create React App
 
