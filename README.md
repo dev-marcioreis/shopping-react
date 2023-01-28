@@ -1,6 +1,8 @@
 # Shopping (React)
 Iniciando novo projeto em React JS.<br>
 Link de acesso: https://dev-marcioreis.github.io/shopping-react/
+![image](https://user-images.githubusercontent.com/122680054/215291232-e65b908e-6fdd-4eae-bdcb-15d831269c3d.png)
+
 
 Getting Started with Create React App
 
