@@ -20,7 +20,7 @@
 
     --bg-color: #e5e5e5;
     --card-color: #f6f9fc;
-    --primary-color: #0f52ba;
+    --primary-color: #0433FF;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #2c2c2c;
@@ -29,8 +29,13 @@
     --border: .1rem solid rgba(255, 255, 255, 0.788);
     --transparent-color: rgba(0, 0, 0, 0);
     --light-color: rgba(255, 255, 255, 0.945);
-    --icon-color: hsl(350, 95%, 58%);
+
     --transition: all 400ms ease;
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    
+    --cubic-anim: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    
     --container-lg: 90%;
     --container-md: 100%;
 
@@ -67,8 +72,8 @@ h1, h2, h3, h4, h5 {
     line-height: 1.2;
 }
 section {
-    margin-block-start: 6rem;
-    padding: 3rem 9%;
+    margin-block-start: 4rem;
+    padding: 2rem 2%;
 }
 .headers {
     text-align: center;

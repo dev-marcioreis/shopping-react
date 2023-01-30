@@ -1,16 +1,18 @@
 import './header.css'
-import { BrowserRouter } from 'react-router-dom'
-import Head from './Head'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import Search from './Search'
+
 
 const Header = () => {
   return (
-    <BrowserRouter>
-      <Head />
-      <Search />
-      <Navbar />
-    </BrowserRouter>
+      <header className='header'>
+        <div className="container flex-c">
+          <div className="header__logo">
+            <Link to='/' className='logo'>cart<span>react</span></Link>
+          </div>
+        </div>
+        <Navbar />
+      </header>
   )
 }
 

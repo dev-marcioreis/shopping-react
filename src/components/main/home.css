@@ -1,0 +1,155 @@
+.category {
+    justify-content: space-around;
+    margin-block-start: 5rem;
+    padding: 0 5rem;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box__image {
+    width: auto;
+    height: auto;
+}
+.box__image img {
+    width: 4.5rem;
+    filter: grayscale(1);
+    transition: var(--transition);
+}
+.box__image img:hover {
+    animation: shakeIcons .5s var(--cubic-anim) both;
+    filter: grayscale(0);
+    color: var(--primary-color);
+}
+@keyframes shakeIcons {
+    0%, 100% {
+        transform: rotate(0);
+        transform-origin: 50% 50%;
+    }
+    10%, 90% {
+        transform: rotate(4deg);
+    }
+    20%, 40%, 60% {
+        transform: rotate(-6deg);
+    }
+    30%, 50%, 70% {
+        transform: rotate(6deg);
+    }
+    80% {
+        transform: rotate(-4deg);
+    }
+}
+.box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black-color);
+}
+.box::after {
+    content: '';
+    position: relative;
+    top: .2rem;
+    width: 100%;
+    height: .2rem;
+    border-radius: 4rem;
+    background: hsla(0, 0%, 80%, 0.438);
+}
+
+/*==========Card==========*/
+.slider {
+    padding: 2rem 10rem;
+}
+.card__box  {
+    text-align: center;
+}
+.left h2 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+.left p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.right {
+    height: 15rem;
+    margin-block-end: 1rem;
+}
+.right img {
+    object-fit: contain;
+    height: 100%;
+}
+
+/*==========Media Query 1024px==========*/
+@media (max-width: 1024px) {
+    .category {
+        margin-block-start: 1rem;
+        padding: 0 1rem;
+    }
+    .box__image img {
+        width: 4rem;
+        filter: grayscale(0);
+    }
+    .box__image img:hover {
+        animation: none;
+    }
+    .box h3 {
+        font-size: 1rem;
+    }
+    .slider {
+        padding: .5rem 5rem;
+    }
+    .left h2 {
+        font-size: 1.2rem;
+    }
+    .left p {
+        line-height: 1.6;
+    }
+    .right {
+        height: 14rem;
+    }
+
+}
+
+
+/*==========Media Query 768px==========*/
+@media (max-width: 768px) {
+    .category {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 .5rem;
+    }
+    .box {
+        box-shadow: var(--shadow);
+        background: var(--white-color);
+        padding: .4rem;
+        border-radius: .4rem;
+        text-align: center;
+    }
+    .box__image img {
+        width: 3.5rem;
+    }
+    .box h3 {
+        font-size: .9rem;
+    }
+    .box::after {
+        display: none;
+    }
+    .slider {
+        padding: 0 .5rem;
+    }
+    .card__box  {
+        text-align: center;
+    }
+    .left h2 {
+        font-size: 1.1rem;
+    }
+    .left p {
+        font-size: .9rem;
+        margin-block-end: .3rem;
+    }
+    .right {
+        height: 12rem;
+    }
+    
+}

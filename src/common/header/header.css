@@ -1,259 +1,120 @@
-/*==========Head==========*/
-.head {
-    margin-block-start: 0;
-    padding: .6rem 0;
-    color: var(--light-color);
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 6rem;
+    padding: .5rem 0;
     background: var(--primary-color);
-    transition: var(--transition);
-}
-.left, .right {
-    display: flex;
-    font-weight: 500;
-}
-.right label {
-    cursor: pointer;
-}
-.head i {
-    margin-right: .4rem;
-}
-.head label {
-    margin-right: 1.7rem;
-    font-size: .8rem;
-}
-
-/*==========Search==========*/
-.search {
-    padding: 1rem 0;
     box-shadow: var(--shadow);
-    color: var(--text-color);
-    transition: var(--transition);
+    z-index: 100;
 }
-.search .logo {
+.header__logo {
     width: auto;
     height: auto;
 }
-.search__logo {
-    font-size: 2.2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: var(--primary-color);
-}
-.search__logo span {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin-left: .5rem;
-}
-.search .width {
-    width: 20%;
-}
-.search__box {
-    width: 85%;
-    height: 3rem;
-    border-radius: .5rem;
-    border: var(--border);
-    margin-left: 4rem;
-}
-.search__box input {
-    width: 70%;
-    background: var(--transparent-color);
-}
-::placeholder {
-    color: var(--light-color);
-    font-size: 1.1rem;
-    padding: .5rem;
-}
-.search__box i {
-    width: 5%;
-    font-size: 1.2rem;
-    opacity: 0.5;
-    padding: .2rem;
-    cursor: pointer;
-    line-height: 2.5rem;
-}
-.search__box span {
-    width: 35%;
-    opacity: 0.5;
-    border-left: 2px solid rgba(255, 255, 255, 0.068);
-    padding: .2rem;
-    font-size: 1rem;
-    margin-left: 1rem;
-    line-height: 2.1rem;
-}
-.icon {
-    font-size: 1.7rem;
-    cursor: pointer;
-}
-.icon i {
-    margin-right: 1rem;
-}
-.cart {
-    position: relative;
-}
-.search .cart span {
-    position: absolute;
-    top: -.5rem;
-    right: 0;
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    text-align: center;
-    font-size: .9rem;
+.logo {
+    font-size: 2.1rem;
     font-weight: 700;
+    text-transform: uppercase;
     color: var(--white-color);
-    background: var(--icon-color);
 }
-.search .flex-f {
-    justify-content: end;
-}
-
-/*==========Navbar==========*/
-.header {
-    height: 4rem;
+.logo span {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-left: .4rem;
 }
 .navbar {
-    background: var(--card-color);
-    box-shadow: var(--shadow);
-    padding: 0 1.9rem;
-    border-radius: .5rem;
-    height: 3rem;
-    margin-block-start: .5rem;
+    position: relative;
+    top: .5rem;
+    background: var(--bg-color); 
+    border-radius: 1rem;
     width: 100%;
+    height: 3.2rem;
 }
 .navbar ul {
     line-height: 3rem;
     text-align: center;
 }
 .header ul li {
-    margin-right: 1.7rem;
-    margin-left: -.4rem;
-    width: 10%;
+    width: 100%;
 }
 .header ul li a {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--black-color);
+    color: var(--primary-color);
     text-transform: capitalize;
     padding: .5rem;
-    border-radius: .5rem;
+    border-radius: .2rem;
     transition: var(--transition);
 }
 .header ul li a:hover {
     color: var(--white-color);
     background: var(--primary-color);
 }
-.open {
+.open, .close {
     display: none;
 }
 
 
 /*==========Media Query 1024px==========*/
 @media (max-width: 1024px) {
-    .search {
-        padding: .4rem 0;
+    .header {
+        height: 3.5rem;
     }
-    .search__logo {
-        font-size: 2rem;
+    .logo {
+        font-size: 1.7rem;
     }
-    .search__logo span {
-        font-size: 1rem;
+    .logo span {
+        font-size: 1.1rem;
     }
-    .search__box {
-        height: 2.2rem;
-        margin-left: 2rem;
+    .open, .close {
+        position: absolute;
+        top: -2.7rem;
+        right: -1.5rem;
+        color: var(--white-color);
+        display: block;
+        font-size: 1.7rem;
     }
-    .search__box input {
-        width: 100%;
-    }
-    ::placeholder {
-        font-size: 1rem;
-    }
-    .search__box i {
-        padding: 1rem;
-        font-size: 1.4rem;
-    }
-    .search__box span {
-        display: none;
-    }
-    .icon {
-        font-size: 1.5rem;
-    }
-    .search .cart span {
-        top: -.6rem;
-        width: 1.3rem;
-        height: 1.3rem;
-    }
-    .header ul {
+    .navbar ul {
+        position: relative;
+        top: -.1rem;
+        left: -3.2rem;
         width: 40%;
         height: 100vh;
         padding-block-start: 2rem;
         background: var(--primary-color);
     }
-    .header ul li {
-        padding: .5rem;
-        line-height: 2.7rem;
-        width: 100%;
+    .navbar ul li {
+        padding: .7rem 0;
+        line-height: 2.2rem;
+        width: 80%;
         text-align: left;
         margin-left: 3rem;
     }
-    .header ul li a {
+    .navbar ul li a {
         color: var(--white-color);
-    }
-    .navbar {
-        height: 0;
     }
     .nav__links-mobileMenu {
         position: absolute;
-        top: 6.5%;
-        left: 0;
-        display: block;
-        width: 25%;
-        z-index: 80;
     }
     .header .link {
         display: none;
     }
-    .open, .close {
-        position: absolute;
-        top: .5rem;
-        right: 1.3rem;
-        color: var(--white-color);
-        display: block;
-        font-size: 1.5rem;
-        z-index: 90;
-    }
-
+    
 }
+
 
 
 /*==========Media Query 768px==========*/
 @media (max-width: 768px) {
-    .head {
-        padding: 1.5rem;
-    }
-    .left, .right {
-        display: none;
-    }
-    .search__box {
-        position: absolute;
-        top: .5rem;
-        width: 80%;
-        height: 2rem;
-        margin-left: 0;
-    }
-    .search__box i {
-        color: var(--white-color);
-    }
-    .header ul {
-        width: 70%;
-    }
-    .nav__links-mobileMenu {
-        top: 7.2%;
-    }
     .open, .close {
-        top: .6rem;
-        right: 1.1rem;
+        top: -2.8rem;
+        right: -.5rem;
     }
-
-
+    .navbar ul {
+        width: 75%;
+    }
+    
 }

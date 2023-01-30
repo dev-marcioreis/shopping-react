@@ -1,0 +1,84 @@
+footer {
+    margin-block-start: 5rem;
+    padding-top: 4rem;
+    font-size: .9rem;
+    box-shadow: var(--shadow1);
+}
+.footer__container {
+    display: grid;
+    grid-template-columns: 26rem 1fr 1fr 1fr;
+    gap: 4rem;
+}
+.footer__container .logo {
+    color: var(--primary-color);
+    margin-block-end: -1.7rem;
+}
+.slogan {
+    color: var(--black-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.footer__social {
+    margin-block-start: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footer__social a {
+    transition: var(--transition);
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+.footer__social a:hover {
+    transform: scale(1.2);
+}
+.footer__container article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.footer__container .link {
+    transition: var(--transition);
+    color: var(--black-color);
+    font-weight: 500;
+}
+.footer__container .link:hover {
+    color: var(--primary-color);
+}
+.footer__container article p {
+    margin-block-start: .5rem;
+}
+.footer__container article h4 {
+    margin-block-end: .6rem;
+    font-size: 1rem;
+}
+.footer__copy {
+    border-top: 1px solid hsla(0, 0%, 80%, 0.705);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-block-start: 4rem;
+    font-size: 1.2rem;
+}
+
+
+/*==========Media Query 1024px==========*/
+@media (max-width: 1024px) {
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7rem;
+    }
+
+}
+
+/*==========Media Query 768px==========*/
+@media (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .footer__copy {
+        font-size: 1rem;
+    }
+
+}
