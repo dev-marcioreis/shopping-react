@@ -1,5 +1,5 @@
 # Shopping (React)
-Iniciando novo projeto em React JS.<br>
+Este projeto em React JS é apenas um menu para desktop, tablet e celular.<br>
 Link de acesso: https://dev-marcioreis.github.io/shopping-react/
 ![image](https://user-images.githubusercontent.com/122680054/215291232-e65b908e-6fdd-4eae-bdcb-15d831269c3d.png)
 ![image](https://user-images.githubusercontent.com/122680054/215344238-e1a252c1-0d39-4e65-b802-5ff13517ae1d.png)
