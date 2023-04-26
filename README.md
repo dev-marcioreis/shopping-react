@@ -6,7 +6,7 @@ Este projeto em React JS é apenas um menu para desktop, tablet e celular.
 
 ## 🚀 Finalizado.
 
-## 📋 Técnologias
+## 📋 Tecnologias
 React
 
 ## ✒️ Autor
